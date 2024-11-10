@@ -65,7 +65,7 @@ jobs:
         id: run_msbuild
         run: |
           msbuild .\demo_classlib.sln  /t:clean /p:Configuration=Debug
-          nuget restore .\CalculatorLibrary.sln
+          nuget restore .\demo_classlib.sln
           msbuild .\demo_classlib.sln  /t:build /p:Configuration=Debug
      
       - name: Setup VSTest and add to PATH
